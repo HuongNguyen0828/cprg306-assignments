@@ -1,10 +1,10 @@
-export default function Item(name, quantity, category)
+export default function Item({name, quantity, category})
 {
     return (
         <ul>
-            <li>Name: {name}</li>
-            <li>Quantity: {quantity}</li>
-            <li>Category: {category}</li>
+            <li>{name}</li>
+            <li>{quantity}</li>
+            <li>{category}</li>
         </ul>
     );
 }
