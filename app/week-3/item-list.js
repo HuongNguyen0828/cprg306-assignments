@@ -63,10 +63,10 @@ export default function ItemList() {
     return (
         <>
             {items.map((item, index) => (
-            <section >
+            <section key={index}>
                 <div  className="w-96 p-4 bg-blue-200 border">
-                    <p className=" text-xl font-bold" key={index}>{item.name}</p>
-                    <p key={index}>Buy {item.quantity} in {item.category}</p> 
+                    <p className=" text-xl font-bold" >{item.name}</p>
+                    <p>Buy {item.quantity} in {item.category}</p> 
                 </div>
             </section>
             ))}
