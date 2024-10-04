@@ -15,14 +15,14 @@ export default function NewItem()
   let decrement;
 
 
-  // Disable - when quantity = 0, otherwise, enable
+  // Red: Disable - when quantity = 0, otherwise, enable
   const controlRed = function (number) {
 
     number === 1 ? setRed(true) : setRed(false);
    
   } ;
 
-  // Disable when quantity = 20, otherwise, enable
+  // Blue Disable when quantity = 20, otherwise, enable
   const controlBlue =function (number) {
     number === 20 ? setBlue(true) : setBlue(false);
   } ;
@@ -60,8 +60,8 @@ export default function NewItem()
   return (
       <div className="flex w-52 gap-3 border-2 m-auto mt-5 p-3 text-center">
         <p className="flex-1">{quantity}</p>
-        <button onClick={increment }  disabled={blue} className="flex-1  bg-blue-500 rounded  disabled:bg-slate-400 active:bg-blue-300" >+</button>
-        <button onClick={decrement}  disabled={red} className="flex-1 bg-red-700 rounded disabled:bg-slate-400 active:bg-red-300">-</button>
+        <button onClick={increment }  disabled={blue} className="flex-1  bg-blue-500 rounded  disabled:bg-slate-400 active:bg-blue-300 " >+</button>
+        <button onClick={decrement}  disabled={red} className="flex-1 bg-red-700 rounded disabled:bg-slate-400 active:bg-red-300 ">-</button>
       </div>
     );
   
