@@ -84,7 +84,7 @@ export default function Form()
  
   return (
     <main>
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4 m-5 w-96 mx-auto p-5 bg-blue-300">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4 m-2 w-96 h-50 mx-auto p-3 bg-blue-300">
             <input 
                 className="border rounded h-12 p-2" 
                 type="text" 
