@@ -13,5 +13,4 @@ export default function NewItem() {
         <button onClick={quantity > 1 && (() => setQuantity(quantity - 1))}  disabled={quantity === 1 && true} className="flex-1 bg-red-700 rounded disabled:bg-slate-400 active:bg-red-300 ">-</button>
       </div>
     );
-  
 }
