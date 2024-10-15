@@ -44,7 +44,7 @@ export default function ItemList() {
   // }
   return (
     <>
-      <div className="flex gap-4 m-5">
+      <div className="flex gap-4 m-4 mb-6">
         <p className="mt-auto">Sort by: </p>
         <button
           type="button"
@@ -70,9 +70,9 @@ export default function ItemList() {
       </div>
 
       {sortBy === "grouped category" ? (
-        <ul className="mb-4">
+        <ul>
           {parsedObject.map(([grouped, array], index) => (
-            <li key={index} className="">
+            <li key={index} className="flex flex-col gap-2 m-4 ">
               <span className="font-bold"> {grouped.toUpperCase()} </span>
               {array.map((item) => (
                 <section key={item.id}>
