@@ -2,9 +2,8 @@
 import { useState } from "react";
 
 import Item from "./item.js";
-import MealIdeal from "./meal-ideal.js";
 
-export default function ItemList({ items, onItemClicked }) {
+export default function ItemList({ items, id, onItemClicked }) {
   // Setting state for sorting by
   const [sortBy, setSortBy] = useState("name");
 
@@ -38,13 +37,15 @@ export default function ItemList({ items, onItemClicked }) {
 
       {items.map((item) => (
         <section key={item.id}>
-          <Item
-            className="w-96 p-4 ml-4 border"
-            onClicked={() => onItemClicked(item.name)}
-            name={item.name}
-            quantity={item.quantity}
-            category={item.category}
-          ></Item>
+          <div className="w-96 p-4 ml-4 bg-blue-200 border">
+            <Item
+              id={item.id}
+              name={item.name}
+              quantity={item.quantity}
+              category={item.category}
+              onClicked={onItemClicked}
+            ></Item>
+          </div>
         </section>
       ))}
     </>

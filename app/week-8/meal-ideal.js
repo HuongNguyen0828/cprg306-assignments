@@ -28,13 +28,16 @@ export default function MealIdeal({ ingredient }) {
   }, [ingredient]);
   return (
     <div>
-      <h3>Meal Ideals</h3>
-      <p>Here are some meal ideas using {ingredient}:</p>
-
-      {meals.length > 0 ? (
+      <h2 className="text-3xl font-bold">Meal Ideals</h2>
+      <p>
+        Here are some meal ideas using{" "}
+        <span className="font-bold">{ingredient} </span>:
+      </p>
+      <br />
+      {meals ? (
         meals.map((meal) => <div key={meal.idMeal}>{meal.strMeal}</div>)
       ) : (
-        <p>There are no meal idea found!</p>
+        <p>No matching ideal meal found!</p>
       )}
     </div>
   );
