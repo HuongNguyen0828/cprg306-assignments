@@ -40,7 +40,7 @@ export default function ItemList({ items, onItemClicked }) {
         <section key={item.id}>
           <Item
             className="w-96 p-4 ml-4 border"
-            onClick={() => onItemClicked(item.name)}
+            onClicked={() => onItemClicked(item.name)}
             name={item.name}
             quantity={item.quantity}
             category={item.category}
