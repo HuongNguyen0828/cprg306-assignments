@@ -37,7 +37,7 @@ export default function ItemList({ items, id, onItemClicked }) {
 
       {items.map((item) => (
         <section key={item.id}>
-          <div className="w-96 p-4 ml-4 bg-blue-200 border">
+          <div className="w-96 p-4 ml-4 bg-blue-200 border hover:bg-blue-400 active:bg-blue-600">
             <Item
               id={item.id}
               name={item.name}

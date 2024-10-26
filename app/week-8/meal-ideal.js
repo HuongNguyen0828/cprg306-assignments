@@ -24,9 +24,9 @@ export default function MealIdeal({ ingredient }) {
 
   useEffect(() => {
     // Change the default "" ingredient, so that Ideal meal not render whole list
-    ingredient = "egg";
-    //fetchMeals
-    fetchMeals();
+    if (ingredient != "")
+      //fetchMeals
+      fetchMeals();
   }, [ingredient]);
   return (
     <div>
@@ -38,8 +38,15 @@ export default function MealIdeal({ ingredient }) {
             <span className="font-bold">{ingredient}</span>:
           </p>
           <br />
-          {meals && meals.length > 0 ? (
-            meals.map((meal) => <div key={meal.idMeal}>{meal.strMeal}</div>)
+          {meals ? (
+            meals.map((meal) => (
+              <div
+                className="m-1 w-96 h-50 p-1 bg-orange-200 hover:bg-orange-400 active:bg-orange-600"
+                key={meal.idMeal}
+              >
+                {meal.strMeal}
+              </div>
+            ))
           ) : (
             <p>No matching ideal meal found!</p>
           )}
